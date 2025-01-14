@@ -3,7 +3,6 @@ class Person:
     self.name = name
     self.age = age
 
-p1 = Person("John", 36)
 
 
 
