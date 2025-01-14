@@ -12,4 +12,3 @@ class Stiffener:
     volume = self.cross_section * self.length
     return volume
 
-
