@@ -1,6 +1,5 @@
-from code1 import Person
+from code1 import Stiffener
 
-p1 = Person("John", 36)
+s1 = Stiffener(50, 5, 2000)
 
-print(p1.name)
-print(p1.age)
+print(s1.volume)
