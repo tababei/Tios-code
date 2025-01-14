@@ -1,5 +1,5 @@
 from code1 import Stiffener
 
-s1 = Stiffener(50, 5, 2000)
+s1 = Stiffener(50, 5, 2000, 780)
 
-print(s1.volume)
+print(s1.mass)
