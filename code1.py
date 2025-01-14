@@ -14,5 +14,5 @@ class Stiffener:
     return volume
   @property
   def mass(self):
-    mass = self.volume / (10 ^ 9) * self.density
+    mass = self.volume * (10 ** (-9)) * self.density
     return mass
