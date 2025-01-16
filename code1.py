@@ -16,3 +16,7 @@ class Stiffener:
   def mass(self):
     mass = self.volume * (10 ** (-9)) * self.density
     return mass
+
+
+def sum(a,b):
+  return a+b
