@@ -1,5 +1,10 @@
-from code1 import Stiffener
+#from code1 import Stiffener
+from urllib.request import urlopen
 
-s1 = Stiffener(50, 5, 2000, 780)
+page = urlopen("https://www.scrapethissite.com")
+https = page.read.decode("utf-8")
 
-print(s1.mass)
+print(https)
+
+#s1 = Stiffener(50, 5, 2000, 780)
+
