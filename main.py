@@ -1,4 +1,4 @@
-from code1 import Stiffener
+from modules.my_code1 import Stiffener
 import numpy
 import pandas
 
