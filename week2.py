@@ -16,10 +16,36 @@ for line in lines:
 
 
 def getnext(coords, value):
-    ''' For each coordinate in 'coords', find and return the
-    coordinates of the adjacent cells that contain 'value'
+    ''' 
+    For each coordinate in 'coords', find and return the coordinates 
+    of the adjacent cells that contain 'value'.
     '''
     newcoords = []
-    # Iterate over coords and check adjacent cells
-    # Add the coords of the cells containing 'value' to newcoords
+    for (x, y) in coords:
+        # Check up
+        if x > 0 and int(lines[x-1][y]) == value:
+            newcoords.append((x-1, y))
+        # Check down
+        if x < len(lines)-1 and int(lines[x+1][y]) == value:
+            newcoords.append((x+1, y))
+        # Check left
+        if y > 0 and int(lines[x][y-1]) == value:
+            newcoords.append((x, y-1))
+        # Check right
+        if y < len(lines[0])-1 and int(lines[x][y+1]) == value:
+            newcoords.append((x, y+1))
     return newcoords
+
+
+total_popularity = 0
+
+for head in trailheads:
+    coords = [head]
+    for height in range(1, 10):
+        coords = getnext(coords, height)
+    
+    # Now coords contains all summits (height 9)
+    unique_summits = set(coords)
+    total_popularity += len(unique_summits)
+
+print("Total Popularity Score:", total_popularity)
