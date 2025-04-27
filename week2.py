@@ -15,13 +15,10 @@ for line in lines:
     i += 1
 
 
-
 def getnext(coords, value):
     ''' For each coordinate in 'coords', find and return the
     coordinates of the adjacent cells that contain 'value'
     '''
-    x, y = coords
-    
     newcoords = []
     # Iterate over coords and check adjacent cells
     # Add the coords of the cells containing 'value' to newcoords
